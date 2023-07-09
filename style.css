@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */
+}
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.check {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.check:hover {
+  background-color: rgb(32, 190, 71);
+  transition: 0.5s;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.difficulty {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: 2rem;
+}
+
+.easy {
+  display: inline-block;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border: 4px;
+  border-radius: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #eee;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.medium {
+  display: inline-block;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border: 4px;
+  border-radius: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #eee;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.hard {
+  display: inline-block;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border: 4px;
+  border-radius: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  background-color: #eee;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.easy:hover {
+  background-color: #5ece32;
+  transition: 0.5s;
+}
+
+.medium:hover {
+  background-color: #c4510f;
+  transition: 0.5s;
+}
+
+.hard:hover {
+  background-color: red;
+  transition: 0.5s;
+}
+
+.mode {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 10rem;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+    line-height: 50px;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+  }
+  .difficulty {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 23rem;
+    bottom: 23rem;
+  }
+  .easy {
+    width: 100px;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .medium {
+    width: 100px;
+    font-size: 15px;
+    padding: 0;
+    margin-right: 10px;
+  }
+  .hard {
+    padding: 0px;
+    width: 100px;
+    text-align: center;
+    border: 0px;
+    font-size: 15px;
+    height: 55px;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+    max-height: 100%;
+  }
+  .left {
+    width: 52rem;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mode {
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .number {
+    bottom: 60px;
+    text-align: center;
+  }
+  .guess {
+    padding: 1.5rem;
+    margin-bottom: 20rem;
+    position: relative;
+    right: 50px;
+  }
+  .check {
+    position: relative;
+    bottom: 18rem;
+    right: 1.5rem;
+  }
+  .message {
+    position: relative;
+    right: 25rem;
+    top: 14rem;
+    font-size: 20px;
+  }
+  .label-score {
+    position: relative;
+    right: 36rem;
+    top: 12rem;
+    display: flex;
+  }
+  .label-highscore {
+    position: relative;
+    right: 36rem;
+    top: 14rem;
+    right: 36rem;
+  }
+}
